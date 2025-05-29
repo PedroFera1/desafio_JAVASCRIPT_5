@@ -1,0 +1,67 @@
+.fordform {
+    display: block;
+    width: 300px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    height: 26px;
+    margin: 8px;
+    font-size: 13px;
+    padding: 5px;
+}
+
+select.fordform {
+    width: 310px;
+    height: 36px;
+    color: #807d7d;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+select:focus-visible {
+    outline: none;
+}
+
+main div {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 30px;
+}
+
+.forms {
+    display: block;
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+    font-weight: 800;
+}
+
+
+button {
+    width: 200px;
+    height: 40px;
+    margin-right: 15%;
+    float: right;
+}
+.titulo {
+    margin-left: 8px;
+}
+.forms form button[type="submit"] {
+    width: 50%;
+    display: block;
+    margin-top: 5px; /* Opcional: Adiciona um pouco de espaço acima do botão */
+}
+.textarea#mensagem {
+    width: 100%; /* Ocupa a largura do contêiner */
+    min-height: 100px; /* Define uma altura mínima */
+    padding: 10PX;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que padding e border não aumentem a largura total */
+    font-size: em; /* Tamanho da fonte */
+}
