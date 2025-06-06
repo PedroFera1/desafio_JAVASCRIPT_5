@@ -45,7 +45,7 @@ h2 {
 button {
     width: 200px;
     height: 40px;
-    margin-right: 15%;
+    margin-right: 2%;
     float: right;
 }
 .titulo {
@@ -64,4 +64,44 @@ button {
     border-radius: 4px;
     box-sizing: border-box; /* Garante que padding e border não aumentem a largura total */
     font-size: em; /* Tamanho da fonte */
+}
+.consentimento {
+  width: 320px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  padding: 16px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.consentimento label {
+  display: block;
+  margin-top: 10px;
+}
+
+.consentimento a {
+  color: #007BFF;
+  text-decoration: underline;
+}
+#enviar {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 320px;
+  margin-top: -10px;
+  text-align: center;
+  
+}
+
+#enviar:disabled {
+  background-color: #ccc;
+  color: #180202;
+  cursor: not-allowed;
 }
