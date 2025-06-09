@@ -8,7 +8,7 @@
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
-    <script src="js/form.js" defer></script>
+    <script src="js/form.js"></script>
 </head>
 <body>
     <header>
@@ -30,31 +30,33 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="forms">
-            <div>
-                <img src="img/xls%202.2%20diesel.jpg" alt="Ford Ranger">
-            </div>
-            <div>
-                <h2 class="titulo">Entre em Contato</h2>
-                <form onsubmit="event.preventDefault(); Post(this);">
-                    <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
-                    <input type="email" name="email" placeholder="E-MAIL*" class="fordform" required>
-                    <input type="tel" name="telefone" placeholder="TELEFONE*" class="fordform" required>
-                    <select name="tipoContato" class="fordform" required>
-                        <option value="" disabled selected>TIPO DE CONTATO*</option>
-                        <option value="Elogio">ELOGIO</option>
-                        <option value="Reclamacao">RECLAMAÇÃO</option>
-                        <option value="Solicitacao">SOLICITAÇÃO</option>
-                    </select>
-
-                    <textarea name="mensagem" placeholder="MENSAGEM*" class="fordform" rows="5" required></textarea>
-
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
+   <main>
+    <div class="forms">
+        <div>
+            <img src="img/xls 2.2 diesel.jpg" alt="Imagem do veículo">
         </div>
-    </main>
+        <div>
+            <h2 class="titulo">Sobre Você</h2>
+            <form onsubmit="Post(this);">
+                <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
+                <input type="text" name="email" placeholder="E-MAIL*" class="fordform" required>
+                <input type="text" name="TELEFONE" placeholder="TELEFONE*" class="fordform" required>
+                <select name="contato" class="fordform" required>
+                    <option value="" disabled selected>TIPO DE CONTATO*</option>
+                    <option value="elogio">ELOGIO</option>
+                    <option value="reclamacao">RECLAMAÇÃO</option>
+                    <option value="solicitacao">SOLICITAÇÃO</option>
+                </select>
+                
+                <div class="form-group">
+                   <input type="text" name="MENSAGEM:" placeholder="MENSAGEM:" class="fordform" required>
+                    <textarea id="mensagem" name="mensagem" class="fordform" rows="5"></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</main>
     <footer>
         <nav id="social">
             <ul>
@@ -67,6 +69,7 @@
         <div>
            <img src="img/ford-96.png" width="70" alt="Logo Ford Pequeno" />
         </div>
-    </footer>
+    </footer>   
+    
 </body>
 </html>
