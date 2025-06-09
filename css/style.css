@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
-    background: #FFFFFF;
+    background: #ffffff;
     height: 100%;
     font-family: 'Roboto', sans-serif;
 }
@@ -126,3 +126,23 @@ header {
     border-bottom: none; /* Remove a borda inferior do header */
 }
 
+/* Media Queries para Responsividade (ajustes para telas menores) */
+@media (max-width: 768px) {
+    .form-section {
+        flex-direction: column; /* Pilha os elementos em telas menores */
+        gap: 20px;
+    }
+    .image-container, .contact-form {
+        min-width: unset; /* Remove o min-width para permitir que ocupem 100% */
+        width: 100%;
+    }
+    .form-row {
+        flex-direction: column; /* Pilha os campos lado a lado em telas menores */
+        gap: 0; /* Remove o gap entre campos empilhados */
+    }
+    .form-group.half-width {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-bottom: 15px; /* Adiciona margem inferior para campos empilhados */
+    }
+}

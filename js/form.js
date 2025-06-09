@@ -1,5 +1,5 @@
 
-// Classe Contato
+
 class Contato {
     constructor(nome, sobrenome, email, cpf, telefone, tipoContato, mensagem) {
         this.nome = nome;
@@ -12,7 +12,7 @@ class Contato {
     }
 }
 
-// Função para capturar os dados do formulário
+
 function Post(form) {
     let data = new Contato(
         form.elements.namedItem("nome").value,
@@ -28,7 +28,7 @@ function Post(form) {
     alert('Obrigado, ' + data.nome + '! Sua mensagem foi enviada com sucesso.');
 }
 
-// Função de validação do nome
+
 function Enviar() {
     var nome = document.getElementsByName("nome")[0];
 
@@ -39,5 +39,61 @@ function Enviar() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const termsCheckbox = document.getElementById('termsConsent');
+    const marketingConsent = document.getElementById('marketingConsent');
+    const submitButton = document.getElementById('submitButton');
+    const form = document.querySelector('form');
+
+   
+    if (submitButton) {
+        submitButton.disabled = true;
+    }
+
+    
+    if (termsCheckbox && submitButton) {
+        termsCheckbox.addEventListener('change', function() {
+            submitButton.disabled = !this.checked; 
+        });
+    }
+
+    
+    window.Post = function(formElement) {
+        event.preventDefault(); 
+
+        if (termsCheckbox.checked) {
+           
+            const nome = formElement.nome.value;
+            const email = formElement.email.value;
+            const cpf = formElement.cpf.value;
+            const sobrenome = formElement.sobrenome.value;
+            const telefone = formElement.telefone.value;            
+            const contactPreference = formElement.contact_preference ? formElement.contact_preference.value : 'N/A'; 
+            const message = formElement.message ? formElement.message.value : ''; 
+            const termsAccepted = termsCheckbox.checked ? 'Aceito' : 'Não Aceito';
+            const marketingAccepted = marketingConsent.checked ? 'Sim' : 'Não';
+
+            alert(
+                'Formulário enviado com sucesso!\n\n' +
+                'Dados Coletados:\n' +
+                'Nome: ' + nome + '\n' +
+                'E-mail: ' + email + '\n' +
+                'CPF: ' + cpf + '\n' +
+                'Sobrenome: ' + sobrenome + '\n' +
+                'Telefone: ' + telefone + '\n' +
+                'Preferência de Contato: ' + contactPreference + '\n' +
+                'Mensagem: ' + message + '\n\n' +
+                'Consentimentos:\n' +
+                'Termos e Condições: ' + termsAccepted + '\n' +
+                'Receber Novidades: ' + marketingAccepted
+            );
+            
+            
+            formElement.reset();
+        } else {
+            alert('Você precisa aceitar os Termos e Condições para enviar o formulário.');
+        }
+    };
+});
 
 
